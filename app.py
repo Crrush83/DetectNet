@@ -35,6 +35,8 @@ def upload():
         image = Image.open(BytesIO(base64.b64decode(file)))
 
     # step 2. detect image
+    #增加返回文字
+    ret_word = "待修改为识别内容"
     image_array = service.detect(image)
 
     # step 3. convert image_array to byte_array
@@ -44,8 +46,10 @@ def upload():
 
     # step 4. return image_info to page
     image_info = base64.b64encode(img_byte_array.getvalue()).decode('ascii')
-    return image_info
-
+    #修改返回内容
+    ret = image_info + " " + ret_word
+    return ret
+    #return image_info
 
 if __name__ == '__main__':
     app.jinja_env.auto_reload = True
