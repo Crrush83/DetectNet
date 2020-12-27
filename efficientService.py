@@ -24,7 +24,6 @@ anchor_scales = [2 ** 0, 2 ** (1.0 / 3.0), 2 ** (2.0 / 3.0)]
 threshold = 0.2
 iou_threshold = 0.2
 
-#use_cuda = True
 use_cuda = False
 use_float16 = False
 cudnn.fastest = True

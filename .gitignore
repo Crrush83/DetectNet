@@ -1,6 +1,3 @@
-weights/*.pt
-*.pt
-weights/
 */__pycache__
 */runs
 */.idea
